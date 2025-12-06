@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 2
+      maxSurge: 1
+  minReadySeconds: 10
+  progressDeadlineSeconds: 600
+  replicas: 4
+  selector:
+    matchLabels:
+      app: users
+      version: V1
+  template:
+    metadata:
+      labels:
+        version: V1
+        app: users
+    spec:
+      containers:
+        - name: user
+          image: user-app:1.0   # local image
+          #image: user-app:2.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "local-docker"
+            - name: JAVA_OPTS
+              value: "-Xms512m -Xmx1024m"
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 10
+            failureThreshold: 3
+          livenessProbe:
+            httpGet: 
+              path: /actuator/info
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            failureThreshold: 3
+
+
+#configure rolling deployments
+#configure liveliness probve
+#configure readiness probe
+#configure resource limits
+#configure env variables from configmap and secrets
+#configure volume mounts
+#configure affinity and tolerations?????
+#configure autoscaling
+#configure network policies?????
+#configure pod disruption budgets?????
+#configure init containers?????
+#configure sidecar containers?????
+#configure security contexts?????
+#configure service accounts and RBAC?????
+#configure logging and monitoring?????
+#configure horizontal pod autoscaler?????
+#configure pod security policies?????
+#configure custom schedulers?????
+#configure multi-container pods?????
+#configure cronjobs?????
+#configure helm charts?????
+#configure namespaces?????
+#configure ingress?????
+#configure persistent volumes and persistent volume claims?????
+#configure statefulsets?????
+#configure daemonsets?????
+#configure jobs?????
+#configure pod templates?????
+#configure container probes?????
+#configure resource quotas?????
+#configure image pull secrets?????
+#configure service meshes?????
+#configure chaos engineering?????
+#configure gitops?????
+#configure ci/cd pipelines?????
+#configure blue-green deployments?????
+#configure canary deployments?????
+#configure a/b testing?????
+#configure feature flags?????
+#configure api gateways?????
+#configure serverless deployments?????
+#configure edge computing?????
+#configure iot deployments?????
+#configure gpu workloads?????

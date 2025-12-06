@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: "init Script"
+      author: "UJJVAL ALURU"
+      changes:
+        - sqlFile:
+            path: "initial_setup.sql"
+            splitStatements: true
+            relativeToChangelogFile: true
+
+      

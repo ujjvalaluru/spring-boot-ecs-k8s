@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5432/ujjvalmacbookpg
+    username: ujjval
+    password: uj
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      pool-name: app-hikari-pool
+      initialization-fail-timeout: -1
+      auto-commit: false
+      validation-timeout: 5000
+      leak-detection-threshold: 5000
+      connection-test-query: SELECT 1

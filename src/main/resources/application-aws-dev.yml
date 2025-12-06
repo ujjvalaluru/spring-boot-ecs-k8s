@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:aws-wrapper:postgresql://ujjval-aurora-instance-0.ca0mqekspztv.us-east-1.rds.amazonaws.com:5432/ujjvalauroraaws
+    username: ujjval
+    driver-class-name: software.amazon.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      pool-name: app-hikari-pool
+      initialization-fail-timeout: -1
+      auto-commit: false
+      validation-timeout: 5000
+      connection-test-query: SELECT 1
+      data-source-properties:
+        wrapperPlugins: awsSecretsManager,auroraConnectionTracker,failover,efm
+        failoverClusterTopologyRefreshRateMs: 30000
+        secretsManagerRegion: us-east-1
+        secretsManagerSecretId: ${DB_SECRETS_MANAGER_SECRET_ARN} #arn:aws:secretsmanager:us-east-1:106207520156:secret:rds!cluster-a1053adc-b02c-4039-9769-65223a69d7e3-GtNRaS
+
+        

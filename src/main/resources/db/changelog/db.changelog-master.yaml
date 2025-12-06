@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      id: setupDB
+      author: "UJJVAL ALURU"
+      file: "db.changelog-setupDB.yaml"
+      relativeToChangelogFile: true
+      labels: init-script
+#   - include:
+#       id: setupIAMUser
+#       author: "UJJVAL ALURU"
+#       file: "IAM_USER/db.changelog-IAM_USER_SETUP.yaml"
+#       relativeToChangelogFile: true
+#       labels: init-script

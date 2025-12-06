@@ -1,0 +1,38 @@
+requirements for canary deployment
+
+Given:
+	1)current deployment object (d1) is present - deployment selector and pod spec have label "version"="stable"
+	2)current service object (s1) is present - with spec.selector.version ="stable"
+	3)current HTTPProxy(hp1) project contour version is present with routes.service.name=s1
+
+When
+	script is called with input parameter [[5,60],[30,120],[70,60],[100,-1]]
+Then
+	script should take backup of deployment object d1
+	script should take backup of service object s1
+	script should take backup of HTTPProxy (hp1)
+	script should first create a new deployment object(d2) from new code
+	script should second create a new service object (s2) from new code.
+
+	1.script should patch or update HTTPPROXY (hp1) with routes.service.name=s2 with weight 5
+	pause for 60 seconds  or alternatively can request user input to proceed
+	2.script should patch or update HTTPPROXY (hp1) with routes.service.name=s2 with weight 30
+	pause for 120 seconds or alternatively can request user input to proceed
+	3. script should patch or update HTTPPROXY (hp1) with routes.service.name=s2 with weight 70
+	pause for 120 seconds or alternatively can request user input to proceed
+	4. script should patch or update HTTPPROXY (hp1) with routes.service.name=s2 with weight 100
+	end script when weight 100 is processed from input array.
+
+	5.script should prompt for rollback (y/N)
+	
+	6. if N selected 
+		SCript should patch service s1 to select label on d2
+		Script should patch or update HTTPPROXY (hp1) with routes.service.name=s1 with weight 100  and remove routes.service.name=s2 
+		Script should delete Service s2
+		Script should delete deployment d1
+	7. if Y selected
+		Script should patch or update HTTPPROXY (hp1) with routes.service.name=s1 with weight 100 and remove   routes.service.name=s2
+		Script should patch or update HTTPPROXY (hp1) to remove  routes.service.name=s1
+		Script should delete Service s2
+		Script should delete deployment d2
+		

@@ -1,0 +1,280 @@
+
+2025-08-12T18:06:28   .   ____          _            __ _ _
+2025-08-12T18:06:28  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-08-12T18:06:28 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-08-12T18:06:28  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-08-12T18:06:28   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-08-12T18:06:28  =========|_|==============|___/=/_/_/_/
+2025-08-12T18:06:28  :: Spring Boot ::                (v3.5.4)
+2025-08-12T18:06:28 2025-08-12T18:06:28.323Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT using Java 21.0.8 with PID 1 (/app/app.jar started by root in /app)
+2025-08-12T18:06:28 2025-08-12T18:06:28.326Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : The following 1 profile is active: "aws-dev"
+2025-08-12T18:06:30 2025-08-12T18:06:30.806Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-12T18:06:30 2025-08-12T18:06:30.908Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interface.
+2025-08-12T18:06:31 2025-08-12T18:06:31.941Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-12T18:06:32 2025-08-12T18:06:32.011Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-12T18:06:32 2025-08-12T18:06:32.012Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-12T18:06:32 2025-08-12T18:06:32.108Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-12T18:06:32 2025-08-12T18:06:32.110Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3599 ms
+2025-08-12T18:06:32 2025-08-12T18:06:32.709Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Starting...
+2025-08-12T18:06:32 2025-08-12T18:06:32.721Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Start completed.
+
+2025-08-12T18:06:36 2025-08-12T18:06:36.323Z  INFO 1 --- [           main] liquibase.database                       : Set default schema name to public
+2025-08-12T18:06:37 2025-08-12T18:06:37.028Z  INFO 1 --- [           main] liquibase.changelog                      : Creating database changelog table with name: public.databasechangelog
+2025-08-12T18:06:37 2025-08-12T18:06:37.137Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T18:06:37 2025-08-12T18:06:37.206Z  INFO 1 --- [           main] liquibase.snapshot                       : Creating snapshot
+2025-08-12T18:06:37 2025-08-12T18:06:37.322Z  INFO 1 --- [           main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-08-12T18:06:37 2025-08-12T18:06:37.325Z  INFO 1 --- [           main] liquibase.command                        : Using deploymentId: 5021992638
+2025-08-12T18:06:37 2025-08-12T18:06:37.342Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T18:06:37 2025-08-12T18:06:37.424Z  INFO 1 --- [           main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-setupDB.yaml::init Script::UJJVAL ALURU
+2025-08-12T18:06:37 2025-08-12T18:06:37.514Z  INFO 1 --- [           main] liquibase.changelog                      : SQL in file initial_setup.sql executed
+2025-08-12T18:06:37 2025-08-12T18:06:37.518Z  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-setupDB.yaml::init Script::UJJVAL ALURU ran successfully in 93ms
+2025-08-12T18:06:37 2025-08-12T18:06:37.541Z  INFO 1 --- [           main] liquibase.util                           : UPDATE SUMMARY
+2025-08-12T18:06:37 2025-08-12T18:06:37.541Z  INFO 1 --- [           main] liquibase.util                           : Run:                          1
+2025-08-12T18:06:37 2025-08-12T18:06:37.541Z  INFO 1 --- [           main] liquibase.util                           : Previously run:               0
+2025-08-12T18:06:37 2025-08-12T18:06:37.541Z  INFO 1 --- [           main] liquibase.util                           : Filtered out:                 0
+2025-08-12T18:06:37 2025-08-12T18:06:37.541Z  INFO 1 --- [           main] liquibase.util                           : -------------------------------
+2025-08-12T18:06:37 2025-08-12T18:06:37.542Z  INFO 1 --- [           main] liquibase.util                           : Total change sets:            1
+2025-08-12T18:06:37 2025-08-12T18:06:37.543Z  INFO 1 --- [           main] liquibase.util                           : Update summary generated
+2025-08-12T18:06:37 2025-08-12T18:06:37.546Z  INFO 1 --- [           main] liquibase.command                        : Update command completed successfully.
+2025-08-12T18:06:37 2025-08-12T18:06:37.547Z  INFO 1 --- [           main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-08-12T18:06:37 2025-08-12T18:06:37.555Z  INFO 1 --- [           main] liquibase.lockservice                    : Successfully released change log lock
+2025-08-12T18:06:37 2025-08-12T18:06:37.559Z  INFO 1 --- [           main] liquibase.command                        : Command execution complete
+2025-08-12T18:06:37 2025-08-12T18:06:37.997Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-12T18:06:38 2025-08-12T18:06:38.102Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-12T18:06:38 2025-08-12T18:06:38.137Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-12T18:06:38 2025-08-12T18:06:38.723Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-12T18:06:38 2025-08-12T18:06:38.844Z  WARN 1 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-12T18:06:38 2025-08-12T18:06:38.921Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-12T18:06:38 	Database JDBC URL [Connecting through datasource 'HikariDataSource (app-hikari-pool)']
+2025-08-12T18:06:38 	Database driver: undefined/unknown
+2025-08-12T18:06:38 	Database version: 17.5
+2025-08-12T18:06:38 	Autocommit mode: undefined/unknown
+2025-08-12T18:06:38 	Isolation level: undefined/unknown
+2025-08-12T18:06:38 	Minimum pool size: undefined/unknown
+2025-08-12T18:06:38 	Maximum pool size: undefined/unknown
+2025-08-12T18:06:40 2025-08-12T18:06:40.166Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-12T18:06:40 2025-08-12T18:06:40.207Z  INFO 1 --- [           main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@58ec3e8b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-08-12T18:06:40 2025-08-12T18:06:40.301Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T18:06:40 2025-08-12T18:06:40.832Z  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+
+2025-08-12T18:06:42 2025-08-12T18:06:42.138Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-08-12T18:06:42 2025-08-12T18:06:42.410Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-12T18:06:42 2025-08-12T18:06:42.436Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 15.508 seconds (process running for 16.476)
+2025-08-12T18:07:56   .   ____          _            __ _ _
+2025-08-12T18:07:56  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-08-12T18:07:56 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-08-12T18:07:56  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-08-12T18:07:56   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-08-12T18:07:56  =========|_|==============|___/=/_/_/_/
+2025-08-12T18:07:56  :: Spring Boot ::                (v3.5.4)
+2025-08-12T18:07:56 2025-08-12T18:07:56.804Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT using Java 21.0.8 with PID 1 (/app/app.jar started by root in /app)
+2025-08-12T18:07:56 2025-08-12T18:07:56.807Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : The following 1 profile is active: "aws-dev"
+2025-08-12T18:08:00 2025-08-12T18:08:00.364Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-12T18:08:00 2025-08-12T18:08:00.470Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interface.
+2025-08-12T18:08:01 2025-08-12T18:08:01.894Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-12T18:08:01 2025-08-12T18:08:01.963Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-12T18:08:01 2025-08-12T18:08:01.964Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-12T18:08:01 2025-08-12T18:08:01.996Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-12T18:08:02 2025-08-12T18:08:02.049Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4907 ms
+2025-08-12T18:08:02 2025-08-12T18:08:02.778Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Starting...
+2025-08-12T18:08:02 2025-08-12T18:08:02.794Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Start completed.
+2025-08-12T18:08:07 2025-08-12T18:08:07.284Z  INFO 1 --- [           main] liquibase.database                       : Set default schema name to public
+2025-08-12T18:08:08 2025-08-12T18:08:08.262Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T18:08:08 2025-08-12T18:08:08.453Z  INFO 1 --- [           main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-08-12T18:08:08 2025-08-12T18:08:08.463Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T18:08:08 2025-08-12T18:08:08.493Z  INFO 1 --- [           main] liquibase.util                           : UPDATE SUMMARY
+2025-08-12T18:08:08 2025-08-12T18:08:08.493Z  INFO 1 --- [           main] liquibase.util                           : Run:                          0
+2025-08-12T18:08:08 2025-08-12T18:08:08.493Z  INFO 1 --- [           main] liquibase.util                           : Previously run:               1
+2025-08-12T18:08:08 2025-08-12T18:08:08.494Z  INFO 1 --- [           main] liquibase.util                           : Filtered out:                 0
+2025-08-12T18:08:08 2025-08-12T18:08:08.494Z  INFO 1 --- [           main] liquibase.util                           : -------------------------------
+2025-08-12T18:08:08 2025-08-12T18:08:08.494Z  INFO 1 --- [           main] liquibase.util                           : Total change sets:            1
+2025-08-12T18:08:08 2025-08-12T18:08:08.495Z  INFO 1 --- [           main] liquibase.util                           : Update summary generated
+2025-08-12T18:08:08 2025-08-12T18:08:08.497Z  INFO 1 --- [           main] liquibase.command                        : Command execution complete
+2025-08-12T18:08:09 2025-08-12T18:08:09.077Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-12T18:08:09 2025-08-12T18:08:09.186Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-12T18:08:09 2025-08-12T18:08:09.285Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-12T18:08:09 2025-08-12T18:08:09.981Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-12T18:08:10 2025-08-12T18:08:10.085Z  WARN 1 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-12T18:08:10 2025-08-12T18:08:10.157Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-12T18:08:10 	Database JDBC URL [Connecting through datasource 'HikariDataSource (app-hikari-pool)']
+2025-08-12T18:08:10 	Database driver: undefined/unknown
+2025-08-12T18:08:10 	Database version: 17.5
+2025-08-12T18:08:10 	Autocommit mode: undefined/unknown
+2025-08-12T18:08:10 	Isolation level: undefined/unknown
+2025-08-12T18:08:10 	Minimum pool size: undefined/unknown
+2025-08-12T18:08:10 	Maximum pool size: undefined/unknown
+2025-08-12T18:08:11 2025-08-12T18:08:11.575Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-12T18:08:11 2025-08-12T18:08:11.603Z  INFO 1 --- [           main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@48b1b469] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-08-12T18:08:11 2025-08-12T18:08:11.673Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T18:08:12 2025-08-12T18:08:12.288Z  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-12T18:08:13 2025-08-12T18:08:13.878Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-08-12T18:08:14 2025-08-12T18:08:14.087Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-12T18:08:14 2025-08-12T18:08:14.159Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 18.958 seconds (process running for 20.182)
+2025-08-12T18:14:06 2025-08-12T18:14:06.944Z  INFO 1 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-12T18:14:06 2025-08-12T18:14:06.959Z  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-12T18:14:06 2025-08-12T18:14:06.974Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T18:14:06 2025-08-12T18:14:06.977Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown initiated...
+2025-08-12T18:14:06 2025-08-12T18:14:06.996Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown completed.
+^C%                                                                                                                                                                               ujjvalaluru@Ujjvals-MacBook-Air terraform % aws logs tail /ecs/user-service-logs --follow --format short
+2025-08-12T18:58:59 2025-08-12T18:58:59.060Z  INFO 1 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-12T18:58:59 2025-08-12T18:58:59.067Z  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-12T18:58:59 2025-08-12T18:58:59.078Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T18:58:59 2025-08-12T18:58:59.088Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown initiated...
+2025-08-12T18:58:59 2025-08-12T18:58:59.109Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown completed.
+2025-08-12T18:59:10   .   ____          _            __ _ _
+2025-08-12T18:59:10  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-08-12T18:59:10 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-08-12T18:59:10  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-08-12T18:59:10   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-08-12T18:59:10  =========|_|==============|___/=/_/_/_/
+2025-08-12T18:59:10  :: Spring Boot ::                (v3.5.4)
+2025-08-12T18:59:10 2025-08-12T18:59:10.975Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT using Java 21.0.8 with PID 1 (/app/app.jar started by root in /app)
+2025-08-12T18:59:10 2025-08-12T18:59:10.983Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : The following 1 profile is active: "aws-dev"
+2025-08-12T18:59:14 2025-08-12T18:59:14.179Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-12T18:59:14 2025-08-12T18:59:14.286Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
+2025-08-12T18:59:15 2025-08-12T18:59:15.589Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-12T18:59:15 2025-08-12T18:59:15.660Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-12T18:59:15 2025-08-12T18:59:15.660Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-12T18:59:15 2025-08-12T18:59:15.695Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-12T18:59:15 2025-08-12T18:59:15.697Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4529 ms
+2025-08-12T18:59:16 2025-08-12T18:59:16.474Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Starting...
+2025-08-12T18:59:16 2025-08-12T18:59:16.489Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Start completed.
+2025-08-12T18:59:20 2025-08-12T18:59:20.763Z  INFO 1 --- [           main] liquibase.database                       : Set default schema name to public
+2025-08-12T18:59:21 2025-08-12T18:59:21.684Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T18:59:21 2025-08-12T18:59:21.798Z  INFO 1 --- [           main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-08-12T18:59:21 2025-08-12T18:59:21.801Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T18:59:21 2025-08-12T18:59:21.858Z  INFO 1 --- [           main] liquibase.util                           : UPDATE SUMMARY
+2025-08-12T18:59:21 2025-08-12T18:59:21.859Z  INFO 1 --- [           main] liquibase.util                           : Run:                          0
+2025-08-12T18:59:21 2025-08-12T18:59:21.859Z  INFO 1 --- [           main] liquibase.util                           : Previously run:               1
+2025-08-12T18:59:21 2025-08-12T18:59:21.859Z  INFO 1 --- [           main] liquibase.util                           : Filtered out:                 0
+2025-08-12T18:59:21 2025-08-12T18:59:21.859Z  INFO 1 --- [           main] liquibase.util                           : -------------------------------
+2025-08-12T18:59:21 2025-08-12T18:59:21.859Z  INFO 1 --- [           main] liquibase.util                           : Total change sets:            1
+2025-08-12T18:59:21 2025-08-12T18:59:21.860Z  INFO 1 --- [           main] liquibase.util                           : Update summary generated
+2025-08-12T18:59:21 2025-08-12T18:59:21.861Z  INFO 1 --- [           main] liquibase.command                        : Command execution complete
+2025-08-12T18:59:22 2025-08-12T18:59:22.461Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-12T18:59:22 2025-08-12T18:59:22.574Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-12T18:59:22 2025-08-12T18:59:22.664Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-12T18:59:23 2025-08-12T18:59:23.291Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-12T18:59:23 2025-08-12T18:59:23.454Z  WARN 1 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-12T18:59:23 2025-08-12T18:59:23.476Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-12T18:59:23 	Database JDBC URL [Connecting through datasource 'HikariDataSource (app-hikari-pool)']
+2025-08-12T18:59:23 	Database driver: undefined/unknown
+2025-08-12T18:59:23 	Database version: 17.5
+2025-08-12T18:59:23 	Autocommit mode: undefined/unknown
+2025-08-12T18:59:23 	Isolation level: undefined/unknown
+2025-08-12T18:59:23 	Minimum pool size: undefined/unknown
+2025-08-12T18:59:23 	Maximum pool size: undefined/unknown
+2025-08-12T18:59:24 2025-08-12T18:59:24.793Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-12T18:59:24 2025-08-12T18:59:24.815Z  INFO 1 --- [           main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@48b1b469] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-08-12T18:59:24 2025-08-12T18:59:24.884Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T18:59:25 2025-08-12T18:59:25.564Z  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-12T18:59:26 2025-08-12T18:59:26.697Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-08-12T18:59:26 2025-08-12T18:59:26.956Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-12T18:59:26 2025-08-12T18:59:26.980Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 17.423 seconds (process running for 18.587)
+2025-08-12T18:59:49 2025-08-12T18:59:49.190Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-12T18:59:49 2025-08-12T18:59:49.190Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-12T18:59:49 2025-08-12T18:59:49.192Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-08-12T19:09:38   .   ____          _            __ _ _
+2025-08-12T19:09:38  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-08-12T19:09:38 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-08-12T19:09:38  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-08-12T19:09:38   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-08-12T19:09:38  =========|_|==============|___/=/_/_/_/
+2025-08-12T19:09:38  :: Spring Boot ::                (v3.5.4)
+2025-08-12T19:09:38 2025-08-12T19:09:38.524Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT using Java 21.0.8 with PID 1 (/app/app.jar started by root in /app)
+2025-08-12T19:09:38 2025-08-12T19:09:38.526Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : The following 1 profile is active: "aws-dev"
+2025-08-12T19:09:41 2025-08-12T19:09:41.170Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-12T19:09:41 2025-08-12T19:09:41.327Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interface.
+2025-08-12T19:09:42 2025-08-12T19:09:42.439Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-12T19:09:42 2025-08-12T19:09:42.452Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-12T19:09:42 2025-08-12T19:09:42.452Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-12T19:09:42 2025-08-12T19:09:42.527Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-12T19:09:42 2025-08-12T19:09:42.529Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3876 ms
+2025-08-12T19:09:43 2025-08-12T19:09:43.154Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Starting...
+2025-08-12T19:09:43 2025-08-12T19:09:43.224Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Start completed.
+2025-08-12T19:09:46 2025-08-12T19:09:46.644Z  INFO 1 --- [           main] liquibase.database                       : Set default schema name to public
+2025-08-12T19:09:47 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:09:47 Hibernate: insert into user_schema.users (name,id) values (?,?)
+2025-08-12T19:09:47 2025-08-12T19:09:47.527Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T19:09:47 2025-08-12T19:09:47.670Z  INFO 1 --- [           main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-08-12T19:09:47 2025-08-12T19:09:47.673Z  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2025-08-12T19:09:47 2025-08-12T19:09:47.748Z  INFO 1 --- [           main] liquibase.util                           : UPDATE SUMMARY
+2025-08-12T19:09:47 2025-08-12T19:09:47.748Z  INFO 1 --- [           main] liquibase.util                           : Run:                          0
+2025-08-12T19:09:47 2025-08-12T19:09:47.748Z  INFO 1 --- [           main] liquibase.util                           : Previously run:               1
+2025-08-12T19:09:47 2025-08-12T19:09:47.748Z  INFO 1 --- [           main] liquibase.util                           : Filtered out:                 0
+2025-08-12T19:09:47 2025-08-12T19:09:47.748Z  INFO 1 --- [           main] liquibase.util                           : -------------------------------
+2025-08-12T19:09:47 2025-08-12T19:09:47.748Z  INFO 1 --- [           main] liquibase.util                           : Total change sets:            1
+2025-08-12T19:09:47 2025-08-12T19:09:47.749Z  INFO 1 --- [           main] liquibase.util                           : Update summary generated
+2025-08-12T19:09:47 2025-08-12T19:09:47.750Z  INFO 1 --- [           main] liquibase.command                        : Command execution complete
+2025-08-12T19:09:48 2025-08-12T19:09:48.170Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-12T19:09:48 2025-08-12T19:09:48.265Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-12T19:09:48 2025-08-12T19:09:48.363Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-12T19:09:48 2025-08-12T19:09:48.946Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-12T19:09:49 2025-08-12T19:09:49.042Z  WARN 1 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-12T19:09:49 2025-08-12T19:09:49.061Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-12T19:09:49 	Database JDBC URL [Connecting through datasource 'HikariDataSource (app-hikari-pool)']
+2025-08-12T19:09:49 	Database driver: undefined/unknown
+2025-08-12T19:09:49 	Database version: 17.5
+2025-08-12T19:09:49 	Autocommit mode: undefined/unknown
+2025-08-12T19:09:49 	Isolation level: undefined/unknown
+2025-08-12T19:09:49 	Minimum pool size: undefined/unknown
+2025-08-12T19:09:49 	Maximum pool size: undefined/unknown
+2025-08-12T19:09:50 2025-08-12T19:09:50.425Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-12T19:09:50 2025-08-12T19:09:50.455Z  INFO 1 --- [           main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@27ada0e8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-08-12T19:09:50 2025-08-12T19:09:50.554Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T19:09:51 2025-08-12T19:09:51.049Z  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-12T19:09:52 2025-08-12T19:09:52.043Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-08-12T19:09:52 2025-08-12T19:09:52.243Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-12T19:09:52 2025-08-12T19:09:52.268Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 15.035 seconds (process running for 16.007)
+2025-08-12T19:10:16 2025-08-12T19:10:16.670Z  INFO 1 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-12T19:10:16 2025-08-12T19:10:16.671Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-12T19:10:16 2025-08-12T19:10:16.722Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 50 ms
+2025-08-12T19:10:45 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:17:01 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:17:01 Hibernate: insert into user_schema.users (name,id) values (?,?)
+2025-08-12T19:17:07 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:17:50 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:17:50 Hibernate: update user_schema.users set name=? where id=?
+2025-08-12T19:18:10 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:18:10 Hibernate: insert into user_schema.users (name,id) values (?,?)
+2025-08-12T19:18:23 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:18:23 Hibernate: update user_schema.users set name=? where id=?
+2025-08-12T19:18:59 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:18:59 Hibernate: insert into user_schema.users (name,id) values (?,?)
+2025-08-12T19:19:11 Hibernate: select u1_0.id,u1_0.name from user_schema.users u1_0 where u1_0.id=?
+2025-08-12T19:19:11 Hibernate: update user_schema.users set name=? where id=?
+2025-08-12T19:25:00 2025-08-12T19:25:00.593Z  INFO 1 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-12T19:25:00 2025-08-12T19:25:00.605Z  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-12T19:25:00 2025-08-12T19:25:00.616Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T19:25:00 2025-08-12T19:25:00.620Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown initiated...
+2025-08-12T19:25:00 2025-08-12T19:25:00.627Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown completed.
+2025-08-12T19:26:05   .   ____          _            __ _ _
+2025-08-12T19:26:05  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-08-12T19:26:05 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-08-12T19:26:05  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-08-12T19:26:05   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-08-12T19:26:05  =========|_|==============|___/=/_/_/_/
+2025-08-12T19:26:05  :: Spring Boot ::                (v3.5.4)
+2025-08-12T19:26:05 2025-08-12T19:26:05.977Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT using Java 21.0.8 with PID 1 (/app/app.jar started by root in /app)
+2025-08-12T19:26:05 2025-08-12T19:26:05.980Z  INFO 1 --- [           main] com.example.demo.DemoApplication         : The following 1 profile is active: "aws-dev"
+2025-08-12T19:26:09 2025-08-12T19:26:09.279Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-12T19:26:09 2025-08-12T19:26:09.408Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interface.
+2025-08-12T19:26:10 2025-08-12T19:26:10.870Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-12T19:26:10 2025-08-12T19:26:10.887Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-12T19:26:10 2025-08-12T19:26:10.887Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-12T19:26:10 2025-08-12T19:26:10.972Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-12T19:26:10 2025-08-12T19:26:10.974Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4859 ms
+2025-08-12T19:26:11 2025-08-12T19:26:11.786Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Starting...
+2025-08-12T19:26:11 2025-08-12T19:26:11.809Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Start completed.
+2025-08-12T19:26:41 2025-08-12T19:26:41.815Z  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: java.sql.SQLTransientConnectionException: app-hikari-pool - Connection is not available, request timed out after 30000ms (total=0, active=0, idle=0, waiting=0)
+2025-08-12T19:26:41 2025-08-12T19:26:41.815Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown initiated...
+2025-08-12T19:26:45 2025-08-12T19:26:45.185Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : app-hikari-pool - Shutdown completed.
+2025-08-12T19:26:45 2025-08-12T19:26:45.189Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-12T19:26:45 2025-08-12T19:26:45.211Z  INFO 1 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
+2025-08-12T19:26:45 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-12T19:26:45 2025-08-12T19:26:45.230Z ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2025-08-12T19:26:45 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: java.sql.SQLTransientConnectionException: app-hikari-pool - Connection is not available, request timed out after 30000ms (total=0, active=0, idle=0, waiting=0)
+2025-08-12T19:26:45 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.9.jar!/:6.2.9]
+2025-08-12T19:26:45 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.9.jar!/:6.2.9]
+2025-08-12T19:26:45 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.9.jar!/:6.2.9]
+2025-08-12T19:26:45 	at org.springframework.context.support.Abstra

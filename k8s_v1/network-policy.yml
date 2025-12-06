@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ${APP_NAME}-allow-contour-envoy
+  namespace: ${NAMESPACE}
+spec:
+  podSelector:
+    matchLabels:
+      app: ${APP_NAME}        # your backend app pods
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+      - namespaceSelector:
+          matchLabels:
+            app: projectcontour      # label your contour namespace accordingly
+        podSelector:
+          matchLabels:
+            app: envoy               # traffic must come from envoy pods
+    ports:
+      - protocol: TCP
+        port: 8080                   # your app port

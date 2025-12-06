@@ -1,0 +1,152 @@
+
+##########################HOW TO PAUSE rollout###################################
+###########################################################################                                                              
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl rollout pause deployment users      
+deployment.apps/users paused
+
+################################################################
+############################STATUS###############################
+##############################################################
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl describe deployment users
+Name:                   users
+Namespace:              default
+CreationTimestamp:      Tue, 02 Dec 2025 11:35:23 +0530
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 5
+Selector:               app=users
+Replicas:               4 desired | 3 updated | 5 total | 5 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        10
+RollingUpdateStrategy:  2 max unavailable, 1 max surge
+Pod Template:
+  Labels:  app=users
+  Containers:
+   user:
+    Image:      user-app:2.0
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Liveness:   http-get http://:8080/actuator/info delay=20s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:8080/actuator/health delay=15s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      SPRING_PROFILES_ACTIVE:  local-docker
+      JAVA_OPTS:               -Xms512m -Xmx1024m
+    Mounts:                    <none>
+  Volumes:                     <none>
+  Node-Selectors:              <none>
+  Tolerations:                 <none>
+Conditions:
+  Type           Status   Reason
+  ----           ------   ------
+  Available      True     MinimumReplicasAvailable
+  Progressing    Unknown  DeploymentPaused
+OldReplicaSets:  users-6db748fb4 (0/0 replicas created), users-cf57879bb (2/2 replicas created)
+NewReplicaSet:   users-7f5466f7f5 (3/3 replicas created)
+Events:
+  Type    Reason             Age                    From                   Message
+  ----    ------             ----                   ----                   -------
+  Normal  ScalingReplicaSet  5m41s                  deployment-controller  Scaled up replica set users-7f5466f7f5 from 1 to 3
+  Normal  ScalingReplicaSet  5m7s                   deployment-controller  Scaled down replica set users-cf57879bb from 2 to 0
+  Normal  ScalingReplicaSet  5m7s                   deployment-controller  Scaled up replica set users-7f5466f7f5 from 3 to 4
+  Normal  ScalingReplicaSet  4m16s (x2 over 21h)    deployment-controller  Scaled up replica set users-cf57879bb from 0 to 1
+  Normal  ScalingReplicaSet  4m16s (x2 over 21h)    deployment-controller  Scaled up replica set users-cf57879bb from 1 to 3
+  Normal  ScalingReplicaSet  4m16s                  deployment-controller  Scaled down replica set users-7f5466f7f5 from 4 to 2
+  Normal  ScalingReplicaSet  3m43s                  deployment-controller  Scaled down replica set users-7f5466f7f5 from 2 to 0
+  Normal  ScalingReplicaSet  2m50s (x2 over 5m41s)  deployment-controller  Scaled up replica set users-7f5466f7f5 from 0 to 1
+  Normal  ScalingReplicaSet  2m50s (x2 over 5m41s)  deployment-controller  Scaled down replica set users-cf57879bb from 4 to 2
+  Normal  ScalingReplicaSet  2m50s (x2 over 3m43s)  deployment-controller  (combined from similar events): Scaled up replica set users-7f5466f7f5 from 1 to 3
+
+
+######################################################
+  ##############################GET PODS output###############################
+  ############################################################################
+  ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+users-7f5466f7f5-2s46v   1/1     Running   0          6m28s
+users-7f5466f7f5-k7bqx   1/1     Running   0          6m28s
+users-7f5466f7f5-tgj9s   1/1     Running   0          6m28s
+users-cf57879bb-967cw    1/1     Running   0          7m54s
+users-cf57879bb-gdt7f    1/1     Running   0          7m54s
+
+
+##################################################
+#########################
+in round robin fashion
+3 new pods returned response
+2 old pods returned no response due to endpoint not present in old version
+
+jjvalaluru@Ujjvals-MacBook-Air k8s_v1 % curl -X GET http://s1/users/findByName/Ujjval
+{"timestamp":"2025-12-03T03:58:33.775+00:00","status":404,"error":"Not Found","path":"/users/findByName/Ujjval"}%                        
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % curl -X GET http://s1/users/findByName/Ujjval
+[{"id":1234,"name":"ujjvalaluruisthebest"},{"id":1235,"name":"ujjvalalurut"}]%                                                           
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % curl -X GET http://s1/users/findByName/Ujjval
+[{"id":1234,"name":"ujjvalaluruisthebest"},{"id":1235,"name":"ujjvalalurut"}]%                                                           
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % curl -X GET http://s1/users/findByName/Ujjval
+[{"id":1234,"name":"ujjvalaluruisthebest"},{"id":1235,"name":"ujjvalalurut"}]%                                                           
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % curl -X GET http://s1/users/findByName/Ujjval
+{"timestamp":"2025-12-03T03:58:38.126+00:00","status":404,"error":"Not Found","path":"/users/findByName/Ujjval"}%    
+
+
+
+
+
+################RESUMED ROLLOUT##########################
+
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl rollout resume deployment users
+deployment.apps/users resumed
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl get pod
+sNAME                     READY   STATUS    RESTARTS   AGE
+users-7f5466f7f5-2s46v   1/1     Running   0          8m24s
+users-7f5466f7f5-ffhp8   0/1     Running   0          4s
+users-7f5466f7f5-k7bqx   1/1     Running   0          8m24s
+users-7f5466f7f5-tgj9s   1/1     Running   0          8m24s
+
+
+
+##################rollback after fulll deployment to previous version
+   # shows current status
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl rollout status deployment users      
+deployment "users" successfully rolled out
+
+kubectl rollout history deployment/users     ##lists version of deployment 
+REVISION  CHANGE-CAUSE
+1         <none>
+5         <none>
+6         <none>
+
+
+kubectl rollout undo  deployment users
+
+
+######rollback to specific version
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl rollout undo deployment users --to-revision=5
+deployment.apps/users rolled back
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+users-7f5466f7f5-cpfrk   0/1     Running   0          13s
+users-7f5466f7f5-dc62v   0/1     Running   0          13s
+users-7f5466f7f5-dsbzn   0/1     Running   0          13s
+users-cf57879bb-5rnt2    1/1     Running   0          4m54s
+users-cf57879bb-hq5qb    1/1     Running   0          4m54s
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl rollout status deployment users             
+Waiting for deployment "users" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "users" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "users" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "users" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "users" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "users" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "users" rollout to finish: 3 of 4 updated replicas are available...
+Waiting for deployment "users" rollout to finish: 3 of 4 updated replicas are available...
+deployment "users" successfully rolled out
+
+
+
+
+After running kubectl rollout undo deployment users --to-revision=5
+kubectl rollout history deployment/users 
+will not show 5 version any more and creates new version for rolledback status
+ujjvalaluru@Ujjvals-MacBook-Air k8s_v1 % kubectl rollout history deployment/users                                         
+deployment.apps/users 
+REVISION  CHANGE-CAUSE
+1         <none>
+6         <none>
+7         <none>

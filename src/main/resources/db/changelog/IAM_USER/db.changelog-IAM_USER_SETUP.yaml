@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: "init IAM USER"
+      author: "UJJVAL ALURU"
+      changes:
+        - sqlFile:
+            path: "initial_iam_user_setup.sql"
+            splitStatements: true
+            relativeToChangelogFile: true
+
+      
